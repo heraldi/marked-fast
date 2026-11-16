@@ -6,7 +6,10 @@ import { pathToFileURL } from 'node:url';
 import { parse } from '../parse.js';
 
 const kit = resolve(process.argv[2] ?? '../mds-kit/markdown-render-speed-02-kit');
-const { marked } = await import(pathToFileURL(`${kit}/baselines/vendor/marked/marked.esm.js`));
+const comparison = process.argv[3]
+  ? resolve(process.argv[3])
+  : `${kit}/baselines/vendor/marked/marked.esm.js`;
+const { marked } = await import(pathToFileURL(comparison));
 const cases = JSON.parse(readFileSync(`${kit}/practice/input/cases.json`, 'utf8'));
 const groups = [
   ['spec', cases.slice(0, 680), 5],
