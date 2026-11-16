@@ -16,4 +16,13 @@ default options (GFM on, async off).
   LICENSE         the package's LICENSE, byte for byte
                   sha256 8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c
 
-Nothing here is edited. The house baseline carries the same two files (baseline/vendor/marked/).
+The notice above describes the unmodified upstream distribution supplied by the kit.
+
+Local fork for marked-fast (2026-11-16):
+- marked.esm.js now has necessary-first-character guards before inline tokenizers.
+- The original regexes, token precedence, renderer and licenses are retained.
+- The supported entry API is root parse.js with synchronous default GFM options;
+  non-default options and marked extension APIs are not supported by this fork.
+- The upstream SHA-256 above identifies the original file, not this modified fork.
+
+The original LICENSE and this upstream provenance notice are retained.
