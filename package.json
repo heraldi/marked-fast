@@ -1,0 +1,10 @@
+{
+  "name": "marked-fast",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node scripts/differential.mjs",
+    "bench": "node scripts/bench.mjs"
+  }
+}
