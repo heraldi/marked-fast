@@ -21,6 +21,7 @@ The notice above describes the unmodified upstream distribution supplied by the 
 Local fork for marked-fast (2026-11-16):
 - marked.esm.js now has necessary-first-character guards before inline tokenizers.
 - List line extraction uses indexOf/slice instead of allocating split arrays.
+- Inline sources without *, _, or ~ skip unused emphasis-mask/index setup.
 - The original regexes, token precedence, renderer and licenses are retained.
 - The supported entry API is root parse.js with synchronous default GFM options;
   non-default options and marked extension APIs are not supported by this fork.
